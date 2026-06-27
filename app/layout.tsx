@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: 'FitWeek - Your Wardrobe. Planned.',
   description: 'FitWeek helps you plan outfits for the week based on what\'s clean and the weather forecast — so you never have to guess again.',
   keywords: ['wardrobe', 'outfit planning', 'weather', 'fashion', 'AI', 'clothing'],
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'FitWeek - Your Wardrobe. Planned.',
     description: 'Plan outfits for the week based on what\'s clean and the weather forecast.',

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Logo } from "@/components/logo"
 
 const footerLinks = {
   product: [
@@ -55,57 +56,9 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8 6C8 4.89543 8.89543 4 10 4H22C23.1046 4 24 4.89543 24 6V8H8V6Z"
-                  fill="url(#paint0_linear_footer)"
-                />
-                <path
-                  d="M6 10C6 8.89543 6.89543 8 8 8H24C25.1046 8 26 8.89543 26 10V26C26 27.1046 25.1046 28 24 28H8C6.89543 28 6 27.1046 6 26V10Z"
-                  fill="url(#paint1_linear_footer)"
-                />
-                <path
-                  d="M11 14H21M11 18H18"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_footer"
-                    x1="8"
-                    y1="4"
-                    x2="24"
-                    y2="8"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#7B61FF" />
-                    <stop offset="1" stopColor="#4DA3FF" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint1_linear_footer"
-                    x1="6"
-                    y1="8"
-                    x2="26"
-                    y2="28"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#7B61FF" />
-                    <stop offset="1" stopColor="#4DA3FF" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <span className="text-xl font-semibold text-foreground">
-                Fit<span className="gradient-text">Week</span>
-              </span>
-            </Link>
+            <div className="mb-4">
+              <Logo />
+            </div>
             <p className="text-muted-foreground text-sm mb-6">
               Your wardrobe. Planned.
             </p>

@@ -178,10 +178,10 @@ export default function HowItWorksPage() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
-                  href="/"
+                  href="/#waitlist"
                   className="gradient-button text-primary-foreground px-8 py-3 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:shadow-primary/25 inline-flex items-center gap-2"
                 >
-                  Get Started Free
+                  Join the Waitlist
                   <svg
                     width="16"
                     height="16"

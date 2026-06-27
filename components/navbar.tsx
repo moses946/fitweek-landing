@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import { Logo } from "@/components/logo"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -36,61 +37,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="transition-transform duration-300 group-hover:scale-110"
-              >
-                <path
-                  d="M8 6C8 4.89543 8.89543 4 10 4H22C23.1046 4 24 4.89543 24 6V8H8V6Z"
-                  fill="url(#paint0_linear)"
-                />
-                <path
-                  d="M6 10C6 8.89543 6.89543 8 8 8H24C25.1046 8 26 8.89543 26 10V26C26 27.1046 25.1046 28 24 28H8C6.89543 28 6 27.1046 6 26V10Z"
-                  fill="url(#paint1_linear)"
-                />
-                <path
-                  d="M11 14H21M11 18H18"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear"
-                    x1="8"
-                    y1="4"
-                    x2="24"
-                    y2="8"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#7B61FF" />
-                    <stop offset="1" stopColor="#4DA3FF" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint1_linear"
-                    x1="6"
-                    y1="8"
-                    x2="26"
-                    y2="28"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#7B61FF" />
-                    <stop offset="1" stopColor="#4DA3FF" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <span className="text-xl font-semibold text-foreground">
-              Fit<span className="gradient-text">Week</span>
-            </span>
-          </Link>
+          <Logo priority />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -108,7 +55,7 @@ export function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
-              href="#get-started"
+              href="/#waitlist"
               className="gradient-button text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-lg hover:shadow-primary/25 inline-flex items-center gap-2"
             >
               Get Started
@@ -160,7 +107,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                href="#get-started"
+                href="/#waitlist"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="gradient-button text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium text-center mt-2"
               >

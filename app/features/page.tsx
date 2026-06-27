@@ -129,10 +129,10 @@ export default function FeaturesPage() {
               Join thousands of users who have already transformed their wardrobe experience with FitWeek.
             </p>
             <Link
-              href="/"
+              href="/#waitlist"
               className="gradient-button text-primary-foreground px-8 py-3 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:shadow-primary/25 inline-flex items-center gap-2"
             >
-              Get Started Free
+              Join the Waitlist
               <svg
                 width="16"
                 height="16"

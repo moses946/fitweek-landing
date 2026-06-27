@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /waitlist/{entryId} {
+      allow create: if isValidWaitlistEntry();
+      allow read, update, delete: if false;
+    }
+
+    function isValidWaitlistEntry() {
+      return request.resource.data.email is string
+        && request.resource.data.email.size() > 0
+        && request.resource.data.email.size() <= 254
+        && request.resource.data.email.matches('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$')
+        && 'createdAt' in request.resource.data;
+    }
+  }
+}

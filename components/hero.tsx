@@ -62,7 +62,7 @@ export function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10"
             >
               <a
-                href="#get-started"
+                href="#waitlist"
                 className="gradient-button text-primary-foreground px-8 py-3.5 rounded-full text-base font-medium transition-all duration-200 hover:shadow-lg hover:shadow-primary/25 inline-flex items-center justify-center gap-2"
               >
                 Get Started Free
